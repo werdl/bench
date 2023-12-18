@@ -10,7 +10,7 @@
 - zig
 - nim
 - javasript
-- -more
+- more
 
 ### sample results
 
