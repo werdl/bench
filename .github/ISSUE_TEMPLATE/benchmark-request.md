@@ -1,8 +1,8 @@
 ---
-name: Benchark request
+name: Benchmark request
 about: Suggest an idea for this project
 title: ''
-labels: ''
+labels: benchmark, request
 assignees: ''
 
 ---

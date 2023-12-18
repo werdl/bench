@@ -2,7 +2,7 @@
 name: Language request
 about: Suggest an Language for this project
 title: ''
-labels: ''
+labels: language, request
 assignees: ''
 
 ---
