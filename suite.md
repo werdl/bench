@@ -5,6 +5,8 @@
 
 ### implemented
 - hello, world!
+- the fibonacci sequence
+
 
 
 ### to do
@@ -13,7 +15,6 @@
   2. insertion
   3. quick
 - convolving 2 lists size of n
-- the fibonanchi sequence
 - 1. up to the term x
   2. the term x
 

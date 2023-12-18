@@ -29,6 +29,14 @@ scripts = {
     "Hello World": {
         "filename": "hello",
         "langs": ["python", "rust", "c", "cpp"]
+    },
+    "Fibonacci to 15": {
+        "filename": "fib",
+        "langs": ["python", "rust", "c", "cpp"]
+    },
+    "Default Sorter": {
+        "filename": "sort",
+        "langs": ["cpp", "rust", "python"]
     }
 }
 
@@ -39,8 +47,9 @@ for name, lang_info in scripts.items():
     fn = lang_info["filename"]
 
     for lang in lang_info["langs"]:
+        print(f"{name}::{lang}")
         build_cmd = f"{langs[lang]['build']} src/{lang}/{fn}.{langs[lang]['ext']}"
-
+        
         if langs[lang]["build"] != "":
             os.system(build_cmd)
 
