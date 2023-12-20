@@ -2,25 +2,29 @@
 
 
 ## the benchmarks
-
-### implemented
-- hello, world!
-- the fibonacci sequence
-
-
-
-### to do
-- sorts
-- 1. bubble
-  2. insertion
-  3. quick
-- convolving 2 lists size of n
-- 1. up to the term x
-  2. the term x
+|            | hello, world | fibonacci (Nth term) | fibonacci ( to Nth term) | default sorts | bubble sort | insertion sort | quick sort | convolving 2 lists size of N | set operations (set size of N) |
+|------------|--------------|----------------------|--------------------------|---------------|-------------|----------------|------------|------------------------------|--------------------------------|
+| bash       |in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|
+| c          |:heavy_check_mark:|:heavy_check_mark:|:white_check_mark:|:heavy_multiplication_x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:negative_squared_cross_mark:|
+| c++        |:heavy_check_mark:|:heavy_check_mark:|:white_check_mark:|:heavy_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:negative_squared_cross_mark:|
+| haskell    |in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|
+| java       |in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|
+| javascript |in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|
+| php        |in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|
+| python     |:heavy_check_mark:|:heavy_check_mark:|:white_check_mark:|:heavy_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:negative_squared_cross_mark:|
+| ruby       |in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|
+| rust       |:heavy_check_mark:|:heavy_check_mark:|:white_check_mark:|:heavy_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:negative_squared_cross_mark:|
+| typescript |in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|
 
 
-### proposed(more effort)
-- sets size of n
+### key
+:heavy_check_mark: -- done
+
+:white_check_mark: -- to do
+
+:heavy_multiplication_x: -- not avalable in lang
+
+:negative_squared_cross_mark: -- to do in future
 
 ## the sizes of n
 
