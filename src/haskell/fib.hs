@@ -12,3 +12,4 @@ fib n = fib(n - 1) + fib(n - 2)
 
 main = do
     putStr (show (fib(15)))
+    putStr "\n"

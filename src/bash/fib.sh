@@ -10,16 +10,25 @@
 # }
 # console.log(fib(15))
 
-fib () {
-    n="$0"
+fib() {
+    n=15
     if [ "$n" == 0 ] || [ "$n" == 1 ]; then
-        return "$n"
+        echo "$n"
+        exit 0
     else
-        a=$n-1
-        b=$n-2
-        c="$(fib $a)"+"$(fib $b)"
-        return "$c"
+        echo "debug"
+        a=$((n-1))
+        echo $a
+        b=$((n-2))
+        echo $b
+        # c=$(($(fib $a)+$(fib $b)))
+        c=$(fib $a)
+        echo "$c"
+        d=$(fib $b)
+        echo "$d"
+        e=$((c+d))
+        echo "$e"
     fi
 }
 
-echo "$(fib 1)"
+fib
