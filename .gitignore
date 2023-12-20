@@ -1,3 +1,5 @@
 node_modules
 src/ts/node_modules
 src/haskell/dist
+src/c-sharp/bin
+src/c-sharp/obj/Debug
