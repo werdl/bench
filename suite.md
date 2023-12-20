@@ -3,7 +3,7 @@
 
 ## the benchmarks
 |            | hello, world | fibonacci (Nth term) | fibonacci ( to Nth term) | default sorts | bubble sort | insertion sort | quick sort | convolving 2 lists size of N | set operations (set size of N) |
-|------------|--------------|----------------------|--------------------------|---------------|-------------|----------------|------------|------------------------------|--------------------------------|
+|:----------:|:------------:|:--------------------:|:------------------------:|:-------------:|:-----------:|:--------------:|:----------:|:----------------------------:|:------------------------------:|
 | bash       |in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|in dev|
 | c          |:heavy_check_mark:|:heavy_check_mark:|:white_check_mark:|:heavy_multiplication_x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:negative_squared_cross_mark:|
 | c++        |:heavy_check_mark:|:heavy_check_mark:|:white_check_mark:|:heavy_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:negative_squared_cross_mark:|
