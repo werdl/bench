@@ -1,91 +1,73 @@
 import time
 import os
 import json
-import subprocess
+import itertools
+import threading
+import time
+import sys
 
-langs = {
-    "python": {
-        "build": "",
-        "run": "python3",
-        "ext": "py"
-    },
-    "rust": {
-        "build": "rustc -o a.out",
-        "run": "./a.out",
-        "ext": "rs"
-    },
-    "c": {
-        "build": "gcc -o a.out",
-        "run": "./a.out",
-        "ext": "c"
-    },
-    "cpp": {
-        "build": "g++ -o a.out",
-        "run": "./a.out",
-        "ext": "cpp"
-    },
-    "haskell": {
-        "build": "ghc -o a.out",
-        "run": "./a.out",
-        "ext": "hs"
-    },
-    "java": {
-        "build": "",
-        "run": "java",
-        "ext": "java"
-    },
-    "js": {
-        "build": "",
-        "run": "node",
-        "ext":"js"
-    },
-    "ruby": {
-        "build": "",
-        "run": "ruby",
-        "ext": "rb"
-    }
-}
+with open("lang-config.json") as langsfp:
+    langs = json.load(langsfp)
+
+def conv_to_full(name: str):
+    return name.replace('pp', '++').replace('-sharp', '#')
+
+def exclude(*args):
+    langs_to_ret = [key for key, value in langs.items()]
+    for arg in args:
+        if arg!=None:
+            langs_to_ret.remove(arg)
+    return langs_to_ret
 
 scripts = {
     "Hello World": {
         "filename": "hello",
-        "langs": ["python", "rust", "c", "cpp", "haskell", "js", "ruby", "java"]
+        "langs": exclude(None)
     },
     "Fibonacci to 15": {
         "filename": "fib",
-        "langs": ["python", "rust", "c", "cpp", "haskell", "js", "ruby", "java"]
+        "langs": exclude(None)
     },
     "Default Sorter": {
         "filename": "sort",
-        "langs": ["cpp", "rust", "python", "haskell", "js", "ruby", "java"]
+        "langs": exclude("c")
     }
 }
 
 results = {}
+passes = 10
+
+# setup runners
+os.system("chmod +x runners/*.sh")
 
 for name, lang_info in scripts.items():
     cur_result = {}
     fn = lang_info["filename"]
 
     for lang in lang_info["langs"]:
-        print(f"{name}::{lang}")
-        build_cmd = f"{langs[lang]['build']} src/{lang}/{fn}.{langs[lang]['ext']}"
-        
-        if langs[lang]["build"] != "":
-            os.system(build_cmd + " > /dev/null")
+        res_s = []
+        print(f"{name}::{conv_to_full(lang)}")
+        for i in range(passes):
+            
+            if langs[lang]["build"] != "":
+                build_cmd = f"{langs[lang]['build']} src/{lang}/{fn}.{langs[lang]['ext']}"
+                os.system(build_cmd + " > /dev/null")
 
-        cmd_final = langs[lang]["run"]
+            cmd_final = langs[lang]["run"]
 
-        if langs[lang]["build"]=="":
-            cmd_final += f" src/{lang}/{fn}.{langs[lang]['ext']}"
+            if langs[lang]["build"]=="" or lang=="ts": # typescript is special
+                cmd_final += f" src/{lang}/{fn}.{langs[lang]['ext']}"
 
-        cmd_final += " > /dev/null"
+            cmd_final += " > /dev/null"
 
-        start = time.time()
-        os.system(cmd_final)
-        end = time.time()
+            start = time.time()
+            os.system(cmd_final)
+            end = time.time()
 
-        cur_result[lang] = end-start
+            res_s.append(end-start)
+        done = True
+
+        cur_result[lang] = sum(res_s) / len(res_s)
     results[name] = cur_result
     
 for name, res in results.items():
@@ -93,7 +75,7 @@ for name, res in results.items():
     i=0
     for lang, time_res in dict(sorted(res.items(), key=lambda t: t[1])).items():
         i+=1
-        print(f"    {i} - {lang} ({float('%.3g' % time_res)}s)")
+        print(f"\t{i} - {conv_to_full(lang)} ({float('%.3g' % time_res)}s)")
         
 with open("out.json", "w") as outfile:
     json.dump(results, outfile, indent=4)

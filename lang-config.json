@@ -1,0 +1,57 @@
+{
+    "python": {
+        "build": "",
+        "run": "python3",
+        "ext": "py"
+    },
+    "rust": {
+        "build": "rustc -o a.out",
+        "run": "./a.out",
+        "ext": "rs"
+    },
+    "c": {
+        "build": "gcc -o a.out",
+        "run": "./a.out",
+        "ext": "c"
+    },
+    "cpp": {
+        "build": "g++ -o a.out",
+        "run": "./a.out",
+        "ext": "cpp"
+    },
+    "haskell": {
+        "build": "ghc -o a.out",
+        "run": "./a.out",
+        "ext": "hs"
+    },
+    "java": {
+        "build": "",
+        "run": "java",
+        "ext": "java"
+    },
+    "js": {
+        "build": "",
+        "run": "node",
+        "ext":"js"
+    },
+    "ruby": {
+        "build": "",
+        "run": "ruby",
+        "ext": "rb"
+    },
+    "c-sharp": {
+        "build": "mcs -out:a.out",
+        "run": "mono a.out",
+        "ext": "cs"
+    },
+    "php": {
+        "build": "",
+        "run": "php",
+        "ext": "php"
+    },
+    "ts": {
+        "build": "runners/ts_build.sh",
+        "run": "runners/ts_run.sh",
+        "ext": ""
+    }
+}

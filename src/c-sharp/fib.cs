@@ -8,19 +8,14 @@ using System;
 // }
 // console.log(fib(15))
 
-namespace FibN
-{
-  public class FibC
-  {
-    static int FibCalc(int n) {
+class Program {
+    static int fibcalc(int n) {
         if (n == 0 || n == 1) return n;
         else {
-            return FibCalc(n - 1) + FibCalc(n - 2);
+            return fibcalc(n - 1) + fibcalc(n - 2);
         }
     }
-    public static void Fib()
-    {
-      Console.WriteLine(FibCalc(15));    
-    }
+    static void Main() {
+		Console.WriteLine(fibcalc(15));
+	}
   }
-}

@@ -1,8 +1,19 @@
+# js/ts
 node_modules
-src/ts/node_modules
+src/ts/*.js
+dist/*
+package.json
+package-lock.json
+
+# haskell
 src/haskell/dist
+*.hi
+*.o
+
+# c-sharp
 src/c-sharp/bin
 src/c-sharp/obj/Debug
-dist/*
-src/ts/dist/*
-a.out
+
+# general
+*.out
+*.obj
