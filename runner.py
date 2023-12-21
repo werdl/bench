@@ -1,10 +1,7 @@
 import time
 import os
 import json
-import itertools
-import threading
 import time
-import sys
 
 with open("lang-config.json") as langsfp:
     langs = json.load(langsfp)
