@@ -32,7 +32,7 @@ scripts = {
     },
     "Default Sorter": {
         "filename": "sort",
-        "langs": exclude("c", "fortran") # both of these languages lack a sorting method
+        "langs": exclude("c", "fortran", "cobol") # all of these languages lack a sorting method
     }
 }
 

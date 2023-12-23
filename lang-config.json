@@ -41,7 +41,7 @@
     },
     "c-sharp": {
         "build": "mcs -out:a.out",
-        "run": "mono a.out",
+        "run": "./a.out",
         "ext": "cs"
     },
     "php": {
@@ -58,5 +58,20 @@
         "build": "gfortran -o a.out",
         "run": "./a.out",
         "ext": "f90"
+    },
+    "cobol": {
+        "build": "cobc -x -o a.out",
+        "run": "./a.out",
+        "ext": "cbl"
+    },
+    "go": {
+        "build": "go build -o a.out",
+        "run": "./a.out",
+        "ext": "go"
+    },
+    "v": {
+        "build": "v -o a.out",
+        "run": "./a.out",
+        "ext": "v"
     }
 }
