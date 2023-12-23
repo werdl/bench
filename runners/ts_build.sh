@@ -1,1 +1,1 @@
-npx tsc $(echo $1)ts
+npx tsc $(echo $1)

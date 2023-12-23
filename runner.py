@@ -2,6 +2,10 @@ import time
 import os
 import json
 import time
+import platform
+import psutil
+import time
+import subprocess
 
 with open("lang-config.json") as langsfp:
     langs = json.load(langsfp)
@@ -27,12 +31,12 @@ scripts = {
     },
     "Default Sorter": {
         "filename": "sort",
-        "langs": exclude("c")
+        "langs": exclude("c", "fortran") # both of these languages lack a sorting method
     }
 }
 
 results = {}
-passes = 10
+passes = 1
 
 # setup runners
 os.system("chmod +x runners/*.sh")
@@ -73,8 +77,41 @@ for name, res in results.items():
     for lang, time_res in dict(sorted(res.items(), key=lambda t: t[1])).items():
         i+=1
         print(f"\t{i} - {conv_to_full(lang)} ({float('%.3g' % time_res)}s)")
-        
-with open("out.json", "w") as outfile:
-    json.dump(results, outfile, indent=4)
+
+def cpufreq():
+    cpu_frequencies = psutil.cpu_freq(percpu=True)
+
+    total_frequency = sum(freq.current for freq in cpu_frequencies)
+    return total_frequency / len(cpu_frequencies)
+
+with open(f"out/{int(time.time())}.json", "w") as outfile:
+    towrite = {
+        "platform": {
+            "os": platform.system(),
+            "os_ver": platform.version(),
+            "arch": platform.machine(),
+            "cpu_freq": cpufreq(),
+            "phys_cores": psutil.cpu_count(logical=False),
+            "log_cores": psutil.cpu_count(logical=True)
+        },
+        "runner": {
+            "passes": passes,
+            "versions": {}
+        },
+        "raw": results
+    }
+    for name, lang_info in langs.items():
+        tool = lang_info["build"].split(" ")[0]
+        if tool=="":
+            tool = lang_info["run"].split(" ")[0]
+        try:
+            process = subprocess.run(tool + " --version", shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            towrite["runner"]["versions"][name] = process.stdout
+        except subprocess.CalledProcessError as e:
+            towrite["runner"]["versions"][name] = f"Error: {e.stderr}"
+        except Exception as e:
+            towrite["runner"]["versions"][name] = f"Unknown error: {str(e)}"
+
+    json.dump(towrite, outfile, indent=4)
     
 os.remove("a.out")

@@ -46,6 +46,7 @@
 |:-:|:-:|:-:|:-:|
 | c |:heavy_check_mark:|:heavy_multiplication_x:|:heavy_check_mark:|
 | c++ |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| fortan |:heavy_check_mark:|:heavy_multiplication_x:|:heavy_check_mark:|
 | haskell |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 | java |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 | javascript |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|

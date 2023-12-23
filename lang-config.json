@@ -52,6 +52,11 @@
     "ts": {
         "build": "runners/ts_build.sh",
         "run": "runners/ts_run.sh",
-        "ext": ""
+        "ext": "ts"
+    },
+    "fortran": {
+        "build": "gfortran -o a.out",
+        "run": "./a.out",
+        "ext": "f90"
     }
 }

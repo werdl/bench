@@ -1,1 +1,1 @@
-node $(echo $1)js
+node "${1%.ts}.js"
