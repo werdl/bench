@@ -17,6 +17,8 @@
 - any language can be pushed to its limits like this, that is not the point of this project
 ### "where are the optimisation flags?"
 - we chose to exclude them, for the reasons outlined above
+### "where is <lang>?"
+- if you want to add a language (or script), see `CONTRIBUTING.md`
 ### python
 - default python3
 ### rust
