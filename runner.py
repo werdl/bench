@@ -6,6 +6,7 @@ import platform
 import psutil
 import time
 import subprocess
+import sys
 
 with open("lang-config.json") as langsfp:
     langs = json.load(langsfp)
@@ -36,7 +37,7 @@ scripts = {
 }
 
 results = {}
-passes = 1
+passes = int(sys.argv[1])
 
 # setup runners
 os.system("chmod +x runners/*.sh")

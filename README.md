@@ -1,8 +1,9 @@
 # bench
 ## benchmarks for various languages
 
-### sample results
-- see out.json
+### get result
+- install deps
+- then run `python3 runner.py <passes>` where passes is how many times to run each test (we reccommend 10)
 
 
 ### dependencies
