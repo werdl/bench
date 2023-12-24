@@ -11,9 +11,11 @@ First of all, thanks for taking the time to give this project a hand! Here is th
 - First, go to `lang-config.json` and add your language's information there.
 - Next, write any scripts you are interested in writing.
 - Any that you don't want to write, or that don't really fit your language, go to `runner.py` and add your language's name to each `exclude` call in the `scripts` dictionary.
+- Then, append the tools you should use to the `README` document
+- Also, show which scripts you wrote in the `README`
 - Profit! Your language is now being benchmarked.
 
 ## Adding a script to an existing language
 - First, write the script, using the convention outlined above.
 - Then, remove your language's name from the the relevent `exclude` call(s)
-
+- Finally, update the table in the `README`

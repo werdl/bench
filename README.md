@@ -19,54 +19,63 @@
 - we chose to exclude them, for the reasons outlined above
 ### "where is <lang>?"
 - if you want to add a language (or script), see `CONTRIBUTING.md`
-### python
-- default python3
-### rust
-- stable rust release
+
 ### c
 - gcc
+### c#
+- mcs
+### cobol
+- GnuCOBOL
 ### c++
 - g++
+### fortran
+- GNU Fortran
+### go
+- default go from go.dev
 ### haskell
 - ghc
 ### java
-- Oracle SDK
-### js
+- Any SDK (I use Oracle)
+### javascript
 - node
-### ruby
-- default ruby
-### c#
-- mono
-- msc
+### kotlin
+- default kotlin SDK
 ### php
-- default php
-### ts
-- default npx tsc
+- php interpreter
+### python
+- python3 default
+### ruby
+- default ruby interpreter
+### typescript
+- tsc (from npm)
+### v
+- default v compiler
 
 ## the benchmarks
 
-| language | hello, world | default sorting algorithm | fibonacci (15th term)|
+| language | Hello, World! | default sorting algorithm | fibonacci (15th term)|
 |:-:|:-:|:-:|:-:|
-| c |:heavy_check_mark:|:heavy_multiplication_x:|:heavy_check_mark:|
-| c-sharp |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| cobol |:heavy_check_mark:|:heavy_multiplication_x:|:heavy_check_mark:|
-| c++ |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| fortan |:heavy_check_mark:|:heavy_multiplication_x:|:heavy_check_mark:|
-| go |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| haskell |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| java |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| javascript |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| php |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| python |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| ruby |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| rust |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| typescript |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
-| v |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| c |:white_check_mark:|:x:|:white_check_mark:|
+| c# |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| cobol |:white_check_mark:|:x:|:white_check_mark:|
+| c++ |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| fortan |:white_check_mark:|:x:|:white_check_mark:|
+| go |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| haskell |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| java |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| javascript |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| kotlin |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| php |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| python |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| ruby |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| rust |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| typescript |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| v |:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
 
   
 ### key
-- :heavy_check_mark: -- done
-- :heavy_multiplication_x: -- not available in language (example default sorter in C)
+- :white_check_mark: -- done
+- :x: -- not available in language (example default sorter in C)
   
 
