@@ -1,0 +1,174 @@
+{
+    "platform": {
+        "os": "Linux",
+        "os_ver": "#1 SMP PREEMPT_DYNAMIC Debian 6.1.55-1 (2023-09-29)",
+        "arch": "x86_64",
+        "cpu_freq": 4007.3714999999997,
+        "phys_cores": 6,
+        "log_cores": 12
+    },
+    "runner": {
+        "passes": 1,
+        "versions": {
+            "python": "Python 3.11.2\n",
+            "rust": "rustc 1.74.1 (a28077b28 2023-12-04)\n",
+            "c": "gcc (Debian 12.2.0-14) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+            "cpp": "g++ (Debian 12.2.0-14) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+            "haskell": "The Glorious Glasgow Haskell Compilation System, version 9.0.2\n",
+            "java": "",
+            "js": "v18.13.0\n",
+            "ruby": "ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-linux]\n",
+            "c-sharp": "Mono C# compiler version 6.8.0.105\n",
+            "php": "PHP 8.2.7 (cli) (built: Jun  9 2023 19:37:27) (NTS)\nCopyright (c) The PHP Group\nZend Engine v4.2.7, Copyright (c) Zend Technologies\n    with Zend OPcache v8.2.7, Copyright (c), by Zend Technologies\n",
+            "ts": "Version 5.3.3\n",
+            "fortran": "GNU Fortran (Debian 12.2.0-14) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+            "cobol": "cobc (GnuCOBOL) 4.0-early-dev.0\nCopyright (C) 2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart\nBuilt     Sep 19 2022 04:28:17\nPackaged  Jun 06 2020 20:56:36 UTC\nC version \"12.2.0\"\n",
+            "go": "",
+            "v": "V 0.4.3 08189d6\n",
+            "kotlin": ""
+        }
+    },
+    "normalized": {
+        "Hello World": {
+            "python": [
+                1.0
+            ],
+            "rust": [
+                1.0
+            ],
+            "c": [
+                1.0
+            ],
+            "cpp": [
+                1.0
+            ],
+            "haskell": [
+                1.0
+            ],
+            "java": [
+                1.0
+            ],
+            "js": [
+                1.0
+            ],
+            "ruby": [
+                1.0
+            ],
+            "c-sharp": [
+                1.0
+            ],
+            "php": [
+                1.0
+            ],
+            "ts": [
+                1.0
+            ],
+            "fortran": [
+                1.0
+            ],
+            "cobol": [
+                1.0
+            ],
+            "go": [
+                1.0
+            ],
+            "v": [
+                1.0
+            ],
+            "kotlin": [
+                1.0
+            ]
+        },
+        "Fibonacci to 15": {
+            "python": [
+                1.0
+            ],
+            "rust": [
+                1.0
+            ],
+            "c": [
+                1.0
+            ],
+            "cpp": [
+                1.0
+            ],
+            "haskell": [
+                1.0
+            ],
+            "java": [
+                1.0
+            ],
+            "js": [
+                1.0
+            ],
+            "ruby": [
+                1.0
+            ],
+            "c-sharp": [
+                1.0
+            ],
+            "php": [
+                1.0
+            ],
+            "ts": [
+                1.0
+            ],
+            "fortran": [
+                1.0
+            ],
+            "cobol": [
+                1.0
+            ],
+            "go": [
+                1.0
+            ],
+            "v": [
+                1.0
+            ],
+            "kotlin": [
+                1.0
+            ]
+        },
+        "Default Sorter": {
+            "python": [
+                1.0
+            ],
+            "rust": [
+                1.0
+            ],
+            "cpp": [
+                1.0
+            ],
+            "haskell": [
+                1.0
+            ],
+            "java": [
+                1.0
+            ],
+            "js": [
+                1.0
+            ],
+            "ruby": [
+                1.0
+            ],
+            "c-sharp": [
+                1.0
+            ],
+            "php": [
+                1.0
+            ],
+            "ts": [
+                1.0
+            ],
+            "go": [
+                1.0
+            ],
+            "v": [
+                1.0
+            ],
+            "kotlin": [
+                1.0
+            ]
+        }
+    }
+}

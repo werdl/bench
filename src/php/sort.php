@@ -5,8 +5,7 @@ sort($arr);
 
 $clength = count($arr);
 for($x = 0; $x < $clength; $x++) {
-    echo $arr[$x];
-    echo "<br>";
+    echo $arr[$x] . "\n";
 }
 
 ?>

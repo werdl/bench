@@ -1,0 +1,84 @@
+{
+    "platform": {
+        "os": "Linux",
+        "os_ver": "#1 SMP PREEMPT_DYNAMIC Debian 6.1.55-1 (2023-09-29)",
+        "arch": "x86_64",
+        "cpu_freq": 4248.54525,
+        "phys_cores": 6,
+        "log_cores": 12
+    },
+    "runner": {
+        "passes": 1,
+        "versions": {
+            "python": "Python 3.11.2\n",
+            "rust": "rustc 1.74.1 (a28077b28 2023-12-04)\n",
+            "c": "gcc (Debian 12.2.0-14) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+            "cpp": "g++ (Debian 12.2.0-14) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+            "haskell": "The Glorious Glasgow Haskell Compilation System, version 9.0.2\n",
+            "java": "",
+            "js": "v18.13.0\n",
+            "ruby": "ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-linux]\n",
+            "c-sharp": "Mono C# compiler version 6.8.0.105\n",
+            "php": "PHP 8.2.7 (cli) (built: Jun  9 2023 19:37:27) (NTS)\nCopyright (c) The PHP Group\nZend Engine v4.2.7, Copyright (c) Zend Technologies\n    with Zend OPcache v8.2.7, Copyright (c), by Zend Technologies\n",
+            "ts": "Version 5.3.3\n",
+            "fortran": "GNU Fortran (Debian 12.2.0-14) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+            "cobol": "cobc (GnuCOBOL) 4.0-early-dev.0\nCopyright (C) 2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Keisuke Nishida, Roger While, Ron Norman, Simon Sobisch, Edward Hart\nBuilt     Sep 19 2022 04:28:17\nPackaged  Jun 06 2020 20:56:36 UTC\nC version \"12.2.0\"\n",
+            "go": "",
+            "v": "V 0.4.3 08189d6\n",
+            "kotlin": ""
+        }
+    },
+    "raw": {
+        "Hello World": {
+            "python": 0.007673740386962891,
+            "rust": 0.0009140968322753906,
+            "c": 0.0007915496826171875,
+            "cpp": 0.0012462139129638672,
+            "haskell": 0.0010886192321777344,
+            "java": 0.023746967315673828,
+            "js": 0.10142302513122559,
+            "ruby": 0.045274972915649414,
+            "c-sharp": 0.011270761489868164,
+            "php": 0.00854039192199707,
+            "ts": 0.08608865737915039,
+            "fortran": 0.0011186599731445312,
+            "cobol": 0.0012524127960205078,
+            "go": 0.0010995864868164062,
+            "v": 0.0016143321990966797,
+            "kotlin": 0.03801560401916504
+        },
+        "Fibonacci to 15": {
+            "python": 0.011054039001464844,
+            "rust": 0.0011241436004638672,
+            "c": 0.0008895397186279297,
+            "cpp": 0.0012011528015136719,
+            "haskell": 0.001316070556640625,
+            "java": 0.02319502830505371,
+            "js": 0.09358453750610352,
+            "ruby": 0.04446864128112793,
+            "c-sharp": 0.011602401733398438,
+            "php": 0.008954524993896484,
+            "ts": 0.09097957611083984,
+            "fortran": 0.0009069442749023438,
+            "cobol": 0.0024023056030273438,
+            "go": 0.0010519027709960938,
+            "v": 0.0017371177673339844,
+            "kotlin": 0.03744912147521973
+        },
+        "Default Sorter": {
+            "python": 0.008012771606445312,
+            "rust": 0.0009663105010986328,
+            "cpp": 0.0012319087982177734,
+            "haskell": 0.0011277198791503906,
+            "java": 0.029839515686035156,
+            "js": 0.0910794734954834,
+            "ruby": 0.04613804817199707,
+            "c-sharp": 0.012427568435668945,
+            "php": 0.009885072708129883,
+            "ts": 0.08547520637512207,
+            "go": 0.0012621879577636719,
+            "v": 0.0017158985137939453,
+            "kotlin": 0.03126406669616699
+        }
+    }
+}

@@ -1,10 +1,8 @@
 import time
 import os
 import json
-import time
 import platform
 import psutil
-import time
 import subprocess
 import sys
 
@@ -17,7 +15,7 @@ def conv_to_full(name: str):
 def exclude(*args):
     langs_to_ret = [key for key, value in langs.items()]
     for arg in args:
-        if arg!=None:
+        if arg != None:
             langs_to_ret.remove(arg)
     return langs_to_ret
 
@@ -32,7 +30,7 @@ scripts = {
     },
     "Default Sorter": {
         "filename": "sort",
-        "langs": exclude("c", "fortran", "cobol") # all of these languages lack a sorting method
+        "langs": exclude("c", "fortran", "cobol")  # all of these languages lack a sorting method
     }
 }
 
@@ -50,14 +48,14 @@ for name, lang_info in scripts.items():
         res_s = []
         print(f"{name}::{conv_to_full(lang)}")
         for i in range(passes):
-            
+
             if langs[lang]["build"] != "":
                 build_cmd = f"{langs[lang]['build']} src/{lang}/{fn}.{langs[lang]['ext']}"
                 os.system(build_cmd + " > /dev/null")
 
             cmd_final = langs[lang]["run"]
 
-            if langs[lang]["build"]=="" or lang=="ts": # typescript is special
+            if langs[lang]["build"] == "" or lang == "ts":  # typescript is special
                 cmd_final += f" src/{lang}/{fn}.{langs[lang]['ext']}"
 
             cmd_final += " > /dev/null"
@@ -66,18 +64,25 @@ for name, lang_info in scripts.items():
             os.system(cmd_final)
             end = time.time()
 
-            res_s.append(end-start)
+            res_s.append(end - start)
         done = True
 
         cur_result[lang] = sum(res_s) / len(res_s)
     results[name] = cur_result
-    
+
+multiples = {}
+
 for name, res in results.items():
     print(f"For suite '{name}':")
-    i=0
+
+    multiples[name] = {}
+    i = 0
+    best = min(list(res.values()))
     for lang, time_res in dict(sorted(res.items(), key=lambda t: t[1])).items():
-        i+=1
+        i += 1
         print(f"\t{i} - {conv_to_full(lang)} ({float('%.3g' % time_res)}s)")
+        multiples[name][lang] = round(time_res / best, 3)
+
 
 def cpufreq():
     cpu_frequencies = psutil.cpu_freq(percpu=True)
@@ -99,14 +104,16 @@ with open(f"out/{int(time.time())}.json", "w") as outfile:
             "passes": passes,
             "versions": {}
         },
-        "raw": results
+        "raw": results,
+        "multiples": multiples
     }
     for name, lang_info in langs.items():
         tool = lang_info["build"].split(" ")[0]
-        if tool=="":
+        if tool == "":
             tool = lang_info["run"].split(" ")[0]
         try:
-            process = subprocess.run(tool + " --version", shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            process = subprocess.run(tool + " --version", shell=True, text=True, stdout=subprocess.PIPE,
+                                     stderr=subprocess.PIPE)
             towrite["runner"]["versions"][name] = process.stdout
         except subprocess.CalledProcessError as e:
             towrite["runner"]["versions"][name] = f"Error: {e.stderr}"
@@ -114,5 +121,5 @@ with open(f"out/{int(time.time())}.json", "w") as outfile:
             towrite["runner"]["versions"][name] = f"Unknown error: {str(e)}"
 
     json.dump(towrite, outfile, indent=4)
-    
+
 os.remove("a.out")

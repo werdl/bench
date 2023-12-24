@@ -10,6 +10,15 @@ src/haskell/dist
 *.hi
 *.o
 
+# kotlin
+a.jar
+
+# java
+src/java/*.class
+*.jar
+src/java/*.manifest
+src/java/*.txt
+
 # c-sharp
 src/c-sharp/bin
 src/c-sharp/obj/Debug
