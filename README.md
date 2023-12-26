@@ -67,6 +67,7 @@
 | java |:white_check_mark:|:white_check_mark:|:white_check_mark:|
 | javascript |:white_check_mark:|:white_check_mark:|:white_check_mark:|
 | kotlin |:white_check_mark:|:white_check_mark:|:white_check_mark:|
+| common lisp |:white_check_mark:|:white_check_mark:|:white_check_mark:|
 | php |:white_check_mark:|:white_check_mark:|:white_check_mark:|
 | python |:white_check_mark:|:white_check_mark:|:white_check_mark:|
 | ruby |:white_check_mark:|:white_check_mark:|:white_check_mark:|
