@@ -40,6 +40,8 @@
 - node
 ### kotlin
 - default kotlin SDK
+### lisp
+- SBCL, for ANSI Common Lisp
 ### php
 - php interpreter
 ### python
